@@ -9,20 +9,10 @@
     <!-- Bootstrap-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css">
 
-    <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 
     <!-- Custom styles -->
     <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
-
-    <style>
-        html, body {
-            height: 100%;
-            max-height: 100%;
-        }
-        .top-container {
-            margin-top: 10%;
-        }
-    </style>
 
 </head>
 <body>
@@ -34,11 +24,16 @@
                     <h1 class="title">Наш магазин скоро откроется</h1>
                     <h1 class="title">Оставляйте Ваш имейл в форме ниже</h1>
                     <div>
-                        <form action="" method="post" class="form form-inline">{% csrf_token %}
-                            {{ form.as_p }}
-                            <div>
-                                <button type="submit" class="btn btn-primary">Отправить</button>
+                        <form action="" method="post" class="form form-inline text-center">{% csrf_token %}
+                            <div class="form-group">
+                                <label>Ваше имя: </label>
+                                {{ form.email }}
                             </div>
+                            <div class="form-group">
+                                <label>Ваш имейл: </label>
+                                {{ form.name }}
+                            </div>
+                            <button type="submit" class="btn btn-primary">Отправить</button>
                         </form>
                     </div>
                 </div>
