@@ -6,8 +6,6 @@ html, body {
 
 .top-container {
     padding-top: 10%;
-    color: white;
-
 }
 
 .general-container {
@@ -15,9 +13,27 @@ html, body {
     height: 100%;
 }
 
+.general-container form {
+    margin-top: 30px;
+}
+.general-container form label {
+    font-weight: 100;
+    color: white;
+}
+
 .title {
     text-align: center;
     color: white;
     font-weight: 100;
     line-height: 50px;
+}
+
+.orange-btn {
+    background-color: #e8643e;
+    border: none;
+}
+
+.orange-btn:hover {
+    background-color: #dc5129;
+    border: none;
 }
